@@ -1,0 +1,13 @@
+<launch>
+    <!-- Launch localization node-->
+    <!--include file="$(find turtlebot_localization)/launch/localization_controller.launch" /-->
+
+    <!-- Launch octomap server-->
+    <include file="$(find ho_planning_project)/launch/gridmap.launch" />
+
+    <!-- Launch all nodes-->
+    <node pkg="ho_planning_project" type="frontier_exploration_node.py" name="frontier_exploration_node" output="screen"/>
+    <node pkg="ho_planning_project" type="turtlebot_path_planner_node.py" name="turtlebot_path_planner_node" output="screen"/>
+    <node pkg="ho_planning_project" type="controller_node.py" name="controller_node" output="screen"/>
+    <!-- <node pkg="ho_planning_project" type="Main_Node.py" name="behavior_trees" output="screen"/> -->
+</launch>

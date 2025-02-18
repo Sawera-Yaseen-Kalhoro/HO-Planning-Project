@@ -1,0 +1,23 @@
+digraph pastafarianism {
+ordering=out;
+graph [fontname="times-roman"];
+node [fontname="times-roman"];
+edge [fontname="times-roman"];
+"Path Planning" [fillcolor=orange, fontcolor=black, fontsize=9, label="Ⓜ Path Planning", shape=box, style=filled];
+Selector [fillcolor=cyan, fontcolor=black, fontsize=9, label="Ⓜ Selector", shape=octagon, style=filled];
+"Path Planning" -> Selector;
+CheckBB [fillcolor=gray, fontcolor=black, fontsize=9, label=CheckBB, shape=ellipse, style=filled];
+Selector -> CheckBB;
+Frontier [fillcolor=gray, fontcolor=black, fontsize=9, label=Frontier, shape=ellipse, style=filled];
+Selector -> Frontier;
+Planner [fillcolor=gray, fontcolor=black, fontsize=9, label=Planner, shape=ellipse, style=filled];
+"Path Planning" -> Planner;
+"Path Following" [fillcolor=gold, fontcolor=black, fontsize=9, label="Path Following\nSuccessOnOne", shape=parallelogram, style=filled];
+"Path Planning" -> "Path Following";
+DWA [fillcolor=gray, fontcolor=black, fontsize=9, label=DWA, shape=ellipse, style=filled];
+"Path Following" -> DWA;
+IsPathValid [fillcolor=gray, fontcolor=black, fontsize=9, label=IsPathValid, shape=ellipse, style=filled];
+"Path Following" -> IsPathValid;
+ResetBB [fillcolor=gray, fontcolor=black, fontsize=9, label=ResetBB, shape=ellipse, style=filled];
+"Path Planning" -> ResetBB;
+}

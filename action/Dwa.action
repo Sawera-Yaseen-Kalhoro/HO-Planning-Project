@@ -1,0 +1,12 @@
+# Define the goal
+# PoseStamped waypoint  # where the robot will go
+float32[] goal_pos
+---
+# Define the result
+bool goal_reached
+# string[] goal_reached
+---
+# Define a feedback message 
+# Time passed since the begining of node until reaching the goal
+# TODO, the duration message is a suggestion from internet, check how it works
+string robot_moving

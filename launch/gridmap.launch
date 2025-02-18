@@ -1,0 +1,7 @@
+<launch>
+    <!--param name="~frame_id" type="string" value="world_ned" /-->
+    <node pkg="ho_planning_project" type="laser_scan_to_point_cloud_node.py" name="laserscan_to_pointcloud"/>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap" output="screen">
+        <param name="~frame_id" type="string" value="world_ned" />
+    </node>
+</launch>

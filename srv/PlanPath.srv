@@ -1,0 +1,8 @@
+# Request message
+float64[] goal
+
+---
+
+# Response message
+nav_msgs/Path planned_path
+bool success
